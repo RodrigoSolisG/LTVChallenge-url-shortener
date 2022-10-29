@@ -9,6 +9,12 @@ class ShortUrlsController < ApplicationController
   end
 
   def create
+    shortUrl = ShortUrl.new(full_url:params[:full_url])
+    if shortUrl.save
+      render json: {short_code:shortUrl}
+    else
+      render json: {error:shortUrl.errors}
+    end
   end
 
   def show
