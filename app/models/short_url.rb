@@ -5,6 +5,14 @@ class ShortUrl < ApplicationRecord
   validate :validate_full_url
 
   def short_code
+    return nil if id == nil
+    id = self.id
+    short_url = ''
+    while id
+      short_url += CHARACTERS[id % 62]
+      id /= 62
+    end
+    short_url
   end
 
   def update_title!
