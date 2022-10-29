@@ -8,10 +8,11 @@ class ShortUrl < ApplicationRecord
     return nil if id == nil
     id = self.id
     short_url = ''
-    while id
+    while id > 0
       short_url += CHARACTERS[id % 62]
       id /= 62
     end
+    update_column(:short_url, short_url)
     short_url
   end
 

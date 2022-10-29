@@ -843,3 +843,226 @@ Processing by ShortUrlsController#create as JSON
 Completed 200 OK in 42ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 6658)
 
 
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-29 09:30:57 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"https://www.youtube.com/"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[36mShortUrl Create (0.6ms)[0m  [1m[32mINSERT INTO `short_urls` (`full_url`, `created_at`, `updated_at`) VALUES ('https://www.youtube.com/', '2022-10-29 09:30:57.858249', '2022-10-29 09:30:57.858249')[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 2.8ms | Allocations: 2895)
+
+
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-29 09:32:55 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"https://github.com/"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[36mShortUrl Create (1.0ms)[0m  [1m[32mINSERT INTO `short_urls` (`full_url`, `created_at`, `updated_at`) VALUES ('https://github.com/', '2022-10-29 09:32:55.463833', '2022-10-29 09:32:55.463833')[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+Completed 200 OK in 51ms (Views: 0.6ms | ActiveRecord: 5.5ms | Allocations: 8717)
+
+
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-29 09:38:14 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"https://about.gitlab.com/"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[36mShortUrl Create (0.5ms)[0m  [1m[32mINSERT INTO `short_urls` (`full_url`, `created_at`, `updated_at`) VALUES ('https://about.gitlab.com/', '2022-10-29 09:38:14.455369', '2022-10-29 09:38:14.455369')[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+Completed 200 OK in 43ms (Views: 0.2ms | ActiveRecord: 4.9ms | Allocations: 8496)
+
+
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-29 09:50:51 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.2ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"https://about.gitlab.com/"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[36mShortUrl Create (0.5ms)[0m  [1m[32mINSERT INTO `short_urls` (`full_url`, `created_at`, `updated_at`) VALUES ('https://about.gitlab.com/', '2022-10-29 09:50:51.471807', '2022-10-29 09:50:51.471807')[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 2.0ms | Allocations: 2641)
+
+
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-29 09:59:51 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"https://about.gitlab.com/"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[36mShortUrl Create (0.9ms)[0m  [1m[32mINSERT INTO `short_urls` (`full_url`, `created_at`, `updated_at`) VALUES ('https://about.gitlab.com/', '2022-10-29 09:59:51.725787', '2022-10-29 09:59:51.725787')[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-29 10:18:22 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"https://about.gitlab.com/"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[36mShortUrl Create (0.4ms)[0m  [1m[32mINSERT INTO `short_urls` (`full_url`, `created_at`, `updated_at`) VALUES ('https://about.gitlab.com/', '2022-10-29 10:18:22.339355', '2022-10-29 10:18:22.339355')[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-29 10:20:10 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (297.6ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"https://about.gitlab.com/"}
+  [1m[35m (401.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[36mShortUrl Create (303.5ms)[0m  [1m[32mINSERT INTO `short_urls` (`full_url`, `created_at`, `updated_at`) VALUES ('https://about.gitlab.com/', '2022-10-29 10:20:12.498067', '2022-10-29 10:20:12.498067')[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[35m (399.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-29 10:20:34 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (500.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"https://about.gitlab.com/"}
+  [1m[35m (605.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[36mShortUrl Create (600.8ms)[0m  [1m[32mINSERT INTO `short_urls` (`full_url`, `created_at`, `updated_at`) VALUES ('https://about.gitlab.com/', '2022-10-29 10:20:38.147342', '2022-10-29 10:20:38.147342')[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[35m (501.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-29 10:20:49 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (904.1ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"https://about.gitlab.com/"}
+  [1m[35m (1098.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[36mShortUrl Create (605.9ms)[0m  [1m[32mINSERT INTO `short_urls` (`full_url`, `created_at`, `updated_at`) VALUES ('https://about.gitlab.com/', '2022-10-29 10:20:56.680820', '2022-10-29 10:20:56.680820')[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[35m (501.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-29 10:24:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"https://about.gitlab.com/"}
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[36mShortUrl Create (0.7ms)[0m  [1m[32mINSERT INTO `short_urls` (`full_url`, `created_at`, `updated_at`) VALUES ('https://about.gitlab.com/', '2022-10-29 10:24:12.237923', '2022-10-29 10:24:12.237923')[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[35m (5.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-29 10:26:28 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"https://about.gitlab.com/"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[36mShortUrl Create (0.5ms)[0m  [1m[32mINSERT INTO `short_urls` (`full_url`, `created_at`, `updated_at`) VALUES ('https://about.gitlab.com/', '2022-10-29 10:26:28.390582', '2022-10-29 10:26:28.390582')[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+Completed 200 OK in 34ms (Views: 0.5ms | ActiveRecord: 5.3ms | Allocations: 8604)
+
+
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-29 10:28:12 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"https://about.gitlab.com/"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[36mShortUrl Create (0.6ms)[0m  [1m[32mINSERT INTO `short_urls` (`full_url`, `created_at`, `updated_at`) VALUES ('https://about.gitlab.com/', '2022-10-29 10:28:12.924268', '2022-10-29 10:28:12.924268')[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-29 10:36:51 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"https://about.gitlab.com/"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[36mShortUrl Create (1.0ms)[0m  [1m[32mINSERT INTO `short_urls` (`full_url`, `created_at`, `updated_at`) VALUES ('https://about.gitlab.com/', '2022-10-29 10:36:51.566168', '2022-10-29 10:36:51.566168')[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 4.6ms | Allocations: 10440)
+
+
+  
+NoMethodError (undefined method `short_code=' for #<ShortUrl:0x000056533cae1e48>
+Did you mean?  short_code):
+  
+app/controllers/short_urls_controller.rb:15:in `create'
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-29 10:38:30 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"https://about.gitlab.com/"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[36mShortUrl Create (0.5ms)[0m  [1m[32mINSERT INTO `short_urls` (`full_url`, `created_at`, `updated_at`) VALUES ('https://about.gitlab.com/', '2022-10-29 10:38:30.498509', '2022-10-29 10:38:30.498509')[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+Completed 200 OK in 37ms (Views: 0.4ms | ActiveRecord: 5.7ms | Allocations: 8496)
+
+
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-29 10:43:01 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"https://about.gitlab.com/"}
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms | Allocations: 1211)
+
+
+  
+SyntaxError (/app/app/models/short_url.rb:15: syntax error, unexpected ':', expecting ')'
+    update_column(:short_url: short_url)
+                            ^):
+  
+app/models/short_url.rb:15: syntax error, unexpected ':', expecting ')'
+app/models/short_url.rb:15: syntax error, unexpected ':', expecting ')'
+app/models/short_url.rb:15: syntax error, unexpected ':', expecting ')'
+app/controllers/short_urls_controller.rb:12:in `create'
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-29 10:44:15 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"https://about.gitlab.com/"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[36mShortUrl Create (0.7ms)[0m  [1m[32mINSERT INTO `short_urls` (`full_url`, `created_at`, `updated_at`) VALUES ('https://about.gitlab.com/', '2022-10-29 10:44:16.161169', '2022-10-29 10:44:16.161169')[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/short_urls_controller.rb:13:in `create'
+  [1m[36mShortUrl Update (1.6ms)[0m  [1m[33mUPDATE `short_urls` SET `short_urls`.`short_url` = 'g' WHERE `short_urls`.`id` = 16[0m
+  ↳ app/models/short_url.rb:15:in `short_code'
+Completed 200 OK in 62ms (Views: 0.9ms | ActiveRecord: 6.2ms | Allocations: 9454)
+
+
