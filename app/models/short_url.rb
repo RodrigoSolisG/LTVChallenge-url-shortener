@@ -12,6 +12,7 @@ class ShortUrl < ApplicationRecord
       short_url += CHARACTERS[id % 62]
       id /= 62
     end
+    short_url = short_url.reverse
     update_column(:short_url, short_url)
     short_url
   end
