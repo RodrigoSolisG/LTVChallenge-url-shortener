@@ -803,3 +803,18 @@ puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
 puma (3.12.1) lib/puma/server.rb:474:in `process_client'
 puma (3.12.1) lib/puma/server.rb:334:in `block in run'
 puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-29 09:20:14 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"nope!"}
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 2.2ms | Allocations: 8786)
+
+
+  
+NoMethodError (undefined method `url_validator' for #<ShortUrl:0x00005586f089a4f0>
+Did you mean?  url_validator?):
+  
+app/models/short_url.rb:31:in `validate_full_url'
+app/controllers/short_urls_controller.rb:13:in `create'
