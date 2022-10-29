@@ -818,3 +818,28 @@ Did you mean?  url_validator?):
   
 app/models/short_url.rb:31:in `validate_full_url'
 app/controllers/short_urls_controller.rb:13:in `create'
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-29 09:25:28 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"nope!"}
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 1.6ms | Allocations: 8714)
+
+
+  
+NameError (uninitialized constant #<Class:0x00005621936ac060>::URL
+Did you mean?  URI):
+  
+app/models/short_url.rb:24:in `url_validator?'
+app/models/short_url.rb:31:in `validate_full_url'
+app/controllers/short_urls_controller.rb:13:in `create'
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-29 09:26:05 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"nope!"}
+Completed 200 OK in 42ms (Views: 0.2ms | ActiveRecord: 1.5ms | Allocations: 6658)
+
+
