@@ -19,6 +19,10 @@ class ShortUrl < ApplicationRecord
   def update_title!
   end
 
+  def self.find_by_short_code(code)
+    ShortUrl.find_by_short_url(code)
+  end
+
   private
 
   def url_validator?(url)
@@ -29,10 +33,17 @@ class ShortUrl < ApplicationRecord
   end
 
   def validate_full_url
-    isValid = url_validator?(full_url)
-    if !isValid
-      errors.add(:full_url, "isn't a valid URL")
-    end
-  end
 
+    if full_url
+      isValid = url_validator?(full_url)
+      if !isValid
+        errors.add(:errors, "Full url is not a valid url")
+        errors.add(:full_url, "is not a valid url")
+      end
+    else
+      errors.add(:full_url, "can't be blank")
+    end
+
+    
+  end
 end
