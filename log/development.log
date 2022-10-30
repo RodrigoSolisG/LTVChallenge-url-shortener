@@ -2720,3 +2720,124 @@ Completed 200 OK in 537ms (Views: 0.2ms | ActiveRecord: 7.6ms | Allocations: 182
 [ActiveJob] [UpdateTitleJob] [4e4a8f56-f613-4b90-b0a2-43e4d7d84af7]   [1m[36mShortUrl Load (0.5ms)[0m  [1m[34mSELECT `short_urls`.* FROM `short_urls` WHERE `short_urls`.`id` = 3 LIMIT 1[0m
 [ActiveJob] [UpdateTitleJob] [4e4a8f56-f613-4b90-b0a2-43e4d7d84af7]   ↳ app/jobs/update_title_job.rb:5:in `perform'
 [ActiveJob] [UpdateTitleJob] [4e4a8f56-f613-4b90-b0a2-43e4d7d84af7] Performed UpdateTitleJob (Job ID: 4e4a8f56-f613-4b90-b0a2-43e4d7d84af7) from Resque(default) in 470.34ms
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-30 07:02:29 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"https://facebook.com"}
+  [1m[36mShortUrl Load (0.5ms)[0m  [1m[34mSELECT `short_urls`.* FROM `short_urls` WHERE `short_urls`.`full_url` = 'https://facebook.com' LIMIT 1[0m
+  ↳ app/controllers/short_urls_controller.rb:12:in `create'
+  [1m[36mShortUrl Update (0.7ms)[0m  [1m[33mUPDATE `short_urls` SET `short_urls`.`short_url` = '3' WHERE `short_urls`.`id` = 3[0m
+  ↳ app/models/short_url.rb:16:in `short_code'
+Completed 200 OK in 39ms (Views: 0.2ms | ActiveRecord: 3.5ms | Allocations: 7674)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-30 07:02:34 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShortUrlsController#index as HTML
+  [1m[36mShortUrl Load (1.5ms)[0m  [1m[34mSELECT `short_urls`.* FROM `short_urls` ORDER BY `short_urls`.`click_count` DESC LIMIT 100[0m
+  ↳ app/controllers/short_urls_controller.rb:8:in `index'
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 1.5ms | Allocations: 1563)
+
+
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-30 07:05:38 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"https://www.facebook.com/"}
+  [1m[36mShortUrl Load (0.5ms)[0m  [1m[34mSELECT `short_urls`.* FROM `short_urls` WHERE `short_urls`.`full_url` = 'https://www.facebook.com/' LIMIT 1[0m
+  ↳ app/controllers/short_urls_controller.rb:12:in `create'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/short_urls_controller.rb:17:in `create'
+  [1m[36mShortUrl Create (0.4ms)[0m  [1m[32mINSERT INTO `short_urls` (`full_url`, `created_at`, `updated_at`) VALUES ('https://www.facebook.com/', '2022-10-30 07:05:38.722879', '2022-10-30 07:05:38.722879')[0m
+  ↳ app/controllers/short_urls_controller.rb:17:in `create'
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/short_urls_controller.rb:17:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/short_url.rb:23:in `update_title!'
+  [1m[36mShortUrl Update (0.9ms)[0m  [1m[33mUPDATE `short_urls` SET `short_urls`.`title` = 'Facebook - Inicia sesión o regístrate', `short_urls`.`updated_at` = '2022-10-30 07:05:39.294167' WHERE `short_urls`.`id` = 4[0m
+  ↳ app/models/short_url.rb:23:in `update_title!'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/short_url.rb:23:in `update_title!'
+[ActiveJob] Enqueued UpdateTitleJob (Job ID: 1bfff82e-9378-4941-9bb4-e1967c8864b1) to Resque(default) with arguments: 4
+  [1m[36mShortUrl Update (2.0ms)[0m  [1m[33mUPDATE `short_urls` SET `short_urls`.`short_url` = '4' WHERE `short_urls`.`id` = 4[0m
+  ↳ app/models/short_url.rb:16:in `short_code'
+Completed 200 OK in 773ms (Views: 0.2ms | ActiveRecord: 9.1ms | Allocations: 16759)
+
+
+[ActiveJob] [UpdateTitleJob] [1bfff82e-9378-4941-9bb4-e1967c8864b1] Performing UpdateTitleJob (Job ID: 1bfff82e-9378-4941-9bb4-e1967c8864b1) from Resque(default) enqueued at 2022-10-30T07:05:39Z with arguments: 4
+[ActiveJob] [UpdateTitleJob] [1bfff82e-9378-4941-9bb4-e1967c8864b1]   [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+[ActiveJob] [UpdateTitleJob] [1bfff82e-9378-4941-9bb4-e1967c8864b1]   ↳ app/jobs/update_title_job.rb:5:in `perform'
+[ActiveJob] [UpdateTitleJob] [1bfff82e-9378-4941-9bb4-e1967c8864b1]   [1m[36mShortUrl Load (1.2ms)[0m  [1m[34mSELECT `short_urls`.* FROM `short_urls` WHERE `short_urls`.`id` = 4 LIMIT 1[0m
+[ActiveJob] [UpdateTitleJob] [1bfff82e-9378-4941-9bb4-e1967c8864b1]   ↳ app/jobs/update_title_job.rb:5:in `perform'
+[ActiveJob] [UpdateTitleJob] [1bfff82e-9378-4941-9bb4-e1967c8864b1]   [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [UpdateTitleJob] [1bfff82e-9378-4941-9bb4-e1967c8864b1]   ↳ app/models/short_url.rb:23:in `update_title!'
+[ActiveJob] [UpdateTitleJob] [1bfff82e-9378-4941-9bb4-e1967c8864b1]   [1m[36mShortUrl Update (0.4ms)[0m  [1m[33mUPDATE `short_urls` SET `short_urls`.`title` = 'Facebook - Inicia sesión o regístrate', `short_urls`.`updated_at` = '2022-10-30 07:05:42.820377' WHERE `short_urls`.`id` = 4[0m
+[ActiveJob] [UpdateTitleJob] [1bfff82e-9378-4941-9bb4-e1967c8864b1]   ↳ app/models/short_url.rb:23:in `update_title!'
+[ActiveJob] [UpdateTitleJob] [1bfff82e-9378-4941-9bb4-e1967c8864b1]   [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [UpdateTitleJob] [1bfff82e-9378-4941-9bb4-e1967c8864b1]   ↳ app/models/short_url.rb:23:in `update_title!'
+[ActiveJob] [UpdateTitleJob] [1bfff82e-9378-4941-9bb4-e1967c8864b1] Performed UpdateTitleJob (Job ID: 1bfff82e-9378-4941-9bb4-e1967c8864b1) from Resque(default) in 554.88ms
+Started HEAD "/4" for 172.18.0.1 at 2022-10-30 07:07:06 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShortUrlsController#show as */*
+  Parameters: {"id"=>"4"}
+  [1m[36mShortUrl Load (0.6ms)[0m  [1m[34mSELECT `short_urls`.* FROM `short_urls` WHERE `short_urls`.`short_url` = '4' LIMIT 1[0m
+  ↳ app/models/short_url.rb:29:in `find_by_short_code'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/short_urls_controller.rb:30:in `show'
+  [1m[36mShortUrl Update (1.1ms)[0m  [1m[33mUPDATE `short_urls` SET `short_urls`.`click_count` = 1, `short_urls`.`updated_at` = '2022-10-30 07:07:06.754623' WHERE `short_urls`.`id` = 4[0m
+  ↳ app/controllers/short_urls_controller.rb:30:in `show'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/short_urls_controller.rb:30:in `show'
+Redirected to https://www.facebook.com/
+Completed 302 Found in 19ms (ActiveRecord: 3.7ms | Allocations: 3420)
+
+
+Started HEAD "/2" for 172.18.0.1 at 2022-10-30 07:07:15 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShortUrlsController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mShortUrl Load (0.5ms)[0m  [1m[34mSELECT `short_urls`.* FROM `short_urls` WHERE `short_urls`.`short_url` = '2' LIMIT 1[0m
+  ↳ app/models/short_url.rb:29:in `find_by_short_code'
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/short_urls_controller.rb:30:in `show'
+  [1m[36mShortUrl Update (0.4ms)[0m  [1m[33mUPDATE `short_urls` SET `short_urls`.`click_count` = 1, `short_urls`.`updated_at` = '2022-10-30 07:07:15.505349' WHERE `short_urls`.`id` = 2[0m
+  ↳ app/controllers/short_urls_controller.rb:30:in `show'
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/short_urls_controller.rb:30:in `show'
+Redirected to https://www.beenverified.com/faq/
+Completed 302 Found in 9ms (ActiveRecord: 2.5ms | Allocations: 3221)
+
+
+Started HEAD "/1" for 172.18.0.1 at 2022-10-30 07:07:17 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+Processing by ShortUrlsController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mShortUrl Load (0.5ms)[0m  [1m[34mSELECT `short_urls`.* FROM `short_urls` WHERE `short_urls`.`short_url` = '1' LIMIT 1[0m
+  ↳ app/models/short_url.rb:29:in `find_by_short_code'
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/short_urls_controller.rb:30:in `show'
+  [1m[36mShortUrl Update (0.4ms)[0m  [1m[33mUPDATE `short_urls` SET `short_urls`.`click_count` = 2, `short_urls`.`updated_at` = '2022-10-30 07:07:17.467358' WHERE `short_urls`.`id` = 1[0m
+  ↳ app/controllers/short_urls_controller.rb:30:in `show'
+  [1m[35m (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/short_urls_controller.rb:30:in `show'
+Redirected to https://google.com
+Completed 302 Found in 10ms (ActiveRecord: 2.9ms | Allocations: 3219)
+
+
+Started GET "/" for 172.18.0.1 at 2022-10-30 19:37:44 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.8ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (2.8ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ShortUrlsController#index as HTML
+  [1m[36mShortUrl Load (0.5ms)[0m  [1m[34mSELECT `short_urls`.* FROM `short_urls` ORDER BY `short_urls`.`click_count` DESC LIMIT 100[0m
+  ↳ app/controllers/short_urls_controller.rb:8:in `map'
+  [1m[36mShortUrl Update (0.6ms)[0m  [1m[33mUPDATE `short_urls` SET `short_urls`.`short_url` = '1' WHERE `short_urls`.`id` = 1[0m
+  ↳ app/models/short_url.rb:16:in `short_code'
+  [1m[36mShortUrl Update (0.7ms)[0m  [1m[33mUPDATE `short_urls` SET `short_urls`.`short_url` = '2' WHERE `short_urls`.`id` = 2[0m
+  ↳ app/models/short_url.rb:16:in `short_code'
+  [1m[36mShortUrl Update (0.6ms)[0m  [1m[33mUPDATE `short_urls` SET `short_urls`.`short_url` = '4' WHERE `short_urls`.`id` = 4[0m
+  ↳ app/models/short_url.rb:16:in `short_code'
+Completed 200 OK in 42ms (Views: 0.3ms | ActiveRecord: 5.7ms | Allocations: 8708)
+
+

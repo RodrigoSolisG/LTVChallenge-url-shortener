@@ -20,13 +20,18 @@ class ShortUrl < ApplicationRecord
   def update_title!
     uri = URI.parse(full_url)
     body = Net::HTTP.get(uri)
-    self.update(title: body.match(/<title.*?>(.*)<\/title>/)[1])
+    title = body.match(/<title.*?>(.*)<\/title>/)[1]
+    self.update(title: title) unless title.empty?
     rescue => e
     errors.add(:errors, e)
   end
 
   def self.find_by_short_code(code)
     ShortUrl.find_by_short_url(code)
+  end
+
+  def public_attributes
+    self.short_code
   end
 
   private

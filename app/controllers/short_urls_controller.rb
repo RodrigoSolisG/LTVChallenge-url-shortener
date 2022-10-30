@@ -5,7 +5,7 @@ class ShortUrlsController < ApplicationController
 
   def index
     urls = ShortUrl.order(click_count: :desc).limit(100)
-    render json: {urls:urls}, status: 200
+    render status: 200, json: { urls: urls.map{ |u| u.short_code } }
   end
 
   def create
