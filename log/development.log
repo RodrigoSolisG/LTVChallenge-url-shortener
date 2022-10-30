@@ -2684,3 +2684,39 @@ Processing by ShortUrlsController#create as JSON
 Completed 200 OK in 36ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 7666)
 
 
+Started GET "/" for 172.18.0.1 at 2022-10-30 05:54:21 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.4ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ShortUrlsController#index as */*
+  [1m[36mShortUrl Load (0.3ms)[0m  [1m[34mSELECT `short_urls`.* FROM `short_urls` ORDER BY `short_urls`.`click_count` DESC LIMIT 100[0m
+  ↳ app/controllers/short_urls_controller.rb:8:in `index'
+Completed 200 OK in 37ms (Views: 13.9ms | ActiveRecord: 1.9ms | Allocations: 7183)
+
+
+Started POST "/short_urls.json" for 172.18.0.1 at 2022-10-30 06:13:51 +0000
+Cannot render console from 172.18.0.1! Allowed networks: 127.0.0.0/127.255.255.255, ::1
+  [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by ShortUrlsController#create as JSON
+  Parameters: {"full_url"=>"https://facebook.com"}
+  [1m[36mShortUrl Load (0.4ms)[0m  [1m[34mSELECT `short_urls`.* FROM `short_urls` WHERE `short_urls`.`full_url` = 'https://facebook.com' LIMIT 1[0m
+  ↳ app/controllers/short_urls_controller.rb:12:in `create'
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/short_urls_controller.rb:17:in `create'
+  [1m[36mShortUrl Create (0.4ms)[0m  [1m[32mINSERT INTO `short_urls` (`full_url`, `created_at`, `updated_at`) VALUES ('https://facebook.com', '2022-10-30 06:13:51.444524', '2022-10-30 06:13:51.444524')[0m
+  ↳ app/controllers/short_urls_controller.rb:17:in `create'
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/short_urls_controller.rb:17:in `create'
+[ActiveJob] Enqueued UpdateTitleJob (Job ID: 4e4a8f56-f613-4b90-b0a2-43e4d7d84af7) to Resque(default) with arguments: 3
+  [1m[36mShortUrl Update (2.9ms)[0m  [1m[33mUPDATE `short_urls` SET `short_urls`.`short_url` = '3' WHERE `short_urls`.`id` = 3[0m
+  ↳ app/models/short_url.rb:16:in `short_code'
+Completed 200 OK in 537ms (Views: 0.2ms | ActiveRecord: 7.6ms | Allocations: 18263)
+
+
+[ActiveJob] [UpdateTitleJob] [4e4a8f56-f613-4b90-b0a2-43e4d7d84af7] Performing UpdateTitleJob (Job ID: 4e4a8f56-f613-4b90-b0a2-43e4d7d84af7) from Resque(default) enqueued at 2022-10-30T06:13:51Z with arguments: 3
+[ActiveJob] [UpdateTitleJob] [4e4a8f56-f613-4b90-b0a2-43e4d7d84af7]   [1m[35m (0.5ms)[0m  [1m[35mSET NAMES utf8,  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+[ActiveJob] [UpdateTitleJob] [4e4a8f56-f613-4b90-b0a2-43e4d7d84af7]   ↳ app/jobs/update_title_job.rb:5:in `perform'
+[ActiveJob] [UpdateTitleJob] [4e4a8f56-f613-4b90-b0a2-43e4d7d84af7]   [1m[36mShortUrl Load (0.5ms)[0m  [1m[34mSELECT `short_urls`.* FROM `short_urls` WHERE `short_urls`.`id` = 3 LIMIT 1[0m
+[ActiveJob] [UpdateTitleJob] [4e4a8f56-f613-4b90-b0a2-43e4d7d84af7]   ↳ app/jobs/update_title_job.rb:5:in `perform'
+[ActiveJob] [UpdateTitleJob] [4e4a8f56-f613-4b90-b0a2-43e4d7d84af7] Performed UpdateTitleJob (Job ID: 4e4a8f56-f613-4b90-b0a2-43e4d7d84af7) from Resque(default) in 470.34ms
