@@ -15,6 +15,8 @@ class ShortUrlsController < ApplicationController
     else
       shortUrl = ShortUrl.new(full_url:params[:full_url])
       if shortUrl.save
+        shortUrl.update_title!
+        UpdateTitleJob.perform_later(shortUrl.id)
         render json: {short_code:shortUrl.short_code}, status: 200
       else
         render json: shortUrl.errors

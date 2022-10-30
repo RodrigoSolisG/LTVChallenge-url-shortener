@@ -18,6 +18,12 @@ class ShortUrl < ApplicationRecord
   end
 
   def update_title!
+    begin
+      page_title = Nokogiri::HTML.parse(open(self.full_url)).title
+      update(title: page_title)
+    rescue => e
+      errors.add(:errors, e)
+    end
   end
 
   def self.find_by_short_code(code)
